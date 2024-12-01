@@ -1,0 +1,33 @@
+token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDllYmQzNGFlMTA1MzgzNmYxMzllNCIsImVtYWlsIjoidXNlckBleGFtcGxlLmNvbSIsImlhdCI6MTczMjg5ODIxNCwiZXhwIjoxNzMyOTA1NDE0fQ.F3szuh1allp0lE1ECGo-_6yEZpdm_waC6TGM7nSQrOM
+
+
+
+"password": "things@ymai.in"
+
+
+// 30th
+
+{
+  "email": "users@example.com",
+  "password": "password123"
+}
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGIxNGEzMDAzOTQyYWQ3MDM3YjlmOSIsImVtYWlsIjoidXNlcnNAZXhhbXBsZS5jb20iLCJpYXQiOjE3MzI5NzM3NDYsImV4cCI6MTczMzAxNjk0Nn0._F0tLN65_9Ih9HWv1HCgaD3BYs-n-tBvqLoZt8GJs8g
+
+
+{
+  "endpoint": {
+    "id": "e4fd6cfc-05cd-4cf9-88e7-bc861d31fa55",
+    "endpointId": "d6aae134-bee4-46fd-9a5c-9dca0b218255",
+    "userId": "674b14a3003942ad7037b9f9",
+    "name": "Test Endpoint",
+    "email": "notify@example.com",
+    "discordWh": "https://discord.com/api/webhooks/example",
+    "slackWh": "https://hooks.slack.com/services/example",
+    "webhook": "https://example.com/webhook",
+    "token": "940b38a01ff955fc0c454fc15a0dc31387bb48ceefde5f65d734a71bca3228fa",
+    "createdAt": "2024-11-30T13:39:47.319Z",
+    "updatedAt": "2024-11-30T13:39:47.319Z"
+  }
+}
+

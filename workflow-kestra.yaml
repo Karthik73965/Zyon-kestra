@@ -1,0 +1,47 @@
+id: submission-processing
+namespace: example
+
+inputs:
+  - id: images
+    type: FILE
+    required: true
+    description: "Uploaded image file"
+
+tasks:
+  - id: notify-email
+    type: io.kestra.plugin.core.http.Request
+    uri: "https://api.resend.com/v1/emails"
+    method: "POST"
+    headers:
+      Authorization: "Bearer re_iK1nTVfy_AxsZUdoRCQMdNcgHTRc2iUvE"
+    body: |
+      {
+        "to": "{{ submission.email }}",
+        "subject": "New Submission Received",
+        "body": "You have received a new submission."
+      }
+
+  - id: notify-slack
+    type: io.kestra.plugin.notifications.slack.SlackIncomingWebhook
+    url: "{{ submission.slack }}"
+    payload: |
+      {
+        "text": "New submission received!",
+        "blocks": [
+          {
+            "type": "section",
+            "text": {
+              "type": "mrkdwn",
+              "text": "A new submission has been received. Please check your dashboard for details."
+            }
+          }
+        ]
+      }
+
+  - id: notify-discord
+    type: io.kestra.plugin.notifications.discord.DiscordIncomingWebhook
+    url: "{{ submission.discord }}"
+    payload: |
+      {
+        "content": "New submission received!"
+      }
